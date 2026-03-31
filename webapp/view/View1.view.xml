@@ -1,0 +1,90 @@
+<mvc:View
+    controllerName="navigate.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="page" showHeader="false">
+
+        <content>
+
+            <FlexBox direction="Column" alignItems="Center" justifyContent="Start" height="100%">
+
+                <!-- ================= MAIN CONTENT ================= -->
+                <VBox id="mainContent" alignItems="Center">
+
+                    <Title text="EMPLOYEE DETAILS" />
+                    <Text text="Home" />
+
+                    <Button text="Open Image" press="onShowImage" />
+                    <Button text="Register Form" press="onShowForm" />
+
+                </VBox>
+
+                <!-- ================= IMAGE SECTION ================= -->
+                <VBox id="imageContainer" visible="false" alignItems="Center" width="100%">
+
+                    <!-- Top Bar -->
+                    <HBox width="100%" justifyContent="SpaceBetween">
+
+                        <!-- Back -->
+                        <Button
+                            icon="sap-icon://nav-back"
+                            press="onNavBack"
+                            type="Transparent" />
+
+                        <!-- Close -->
+                        <Button
+                            icon="sap-icon://decline"
+                            press="onCloseImage"
+                            type="Transparent" />
+
+                    </HBox>
+
+                    <!-- Image -->
+                    <Image
+                        id="myImage"
+                        width="300px"
+                        height="200px"
+                        class="customImage"/>
+
+                </VBox>
+
+                <!-- ================= FORM ================= -->
+                <VBox id="formContainer" visible="false" alignItems="Center">
+
+                    <Input id="name" placeholder="Enter Name" />
+                    <Input id="id" placeholder="Enter ID" />
+                    <Input id="role" placeholder="Enter Role" />
+                    <Input id="mobile" placeholder="Enter Mobile" />
+
+                </VBox>
+
+                <!-- ================= SUCCESS PAGE ================= -->
+                <VBox id="successPage"
+                      visible="false"
+                      alignItems="Center"
+                      justifyContent="Center"
+                      height="80vh">
+
+                    <Text text="Form Submitted Successfully ✅" />
+                    <Button text="Resubmit" press="onResubmit" />
+
+                </VBox>
+
+            </FlexBox>
+
+        </content>
+
+        <!-- ================= FOOTER ================= -->
+        <footer>
+            <Bar id="footerBar">
+                <contentRight>
+                    <Button text="Submit" type="Emphasized" press="onSubmitForm" />
+                    <Button text="Cancel" type="Reject" press="onCancel" />
+                </contentRight>
+            </Bar>
+        </footer>
+
+    </Page>
+
+</mvc:View>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head9    <meta charset="utf-8">
+    <title>FLP Sandbox</title>
+
+    <script>
+        window["sap-ushell-config"] = {
+            defaultRenderer: "fiori2",
+            applications: {
+                "myApp-display": {
+                    title: "My App",
+                    description: "Sample App",
+                    additionalInformation: "SAPUI5.Component=sampleproject",
+                    applicationType: "URL",
+                    url: "../"
+                }
+            }
+        };
+    </script>
+
+    <script src="https://ui5.sap.com/test-resources/sap/ushell/bootstrap/sandbox.js"></script>
+    <script src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_fiori_3"
+        data-sap-ui-libs="sap.m, sap.ushell"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-frameOptions="allow">
+    </script>
+</head>
+
+<body class="sapUiBody" id="content"></body>
+</html>
